@@ -1,10 +1,33 @@
-//your JS code here. If required.
-const student={
-	name:"akanksha",
-	age:23,
-	city:"allahabad"
+// //your JS code here. If required.
+// const student={
+// 	name:"akanksha",
+// 	age:23,
+// 	city:"allahabad"
+// };
+
+// function getKeys(student){
+// 	return Object.Keys(student)
+// }
+
+
+// Create the student object
+const student = {
+  name: "John",
 };
 
-function getKeys(student){
-	return Object.Keys(student)
+// Function to get all keys from the object
+function getKeys(obj) {
+  return Object.keys(obj);
 }
+
+// Attach getKeys function to Object prototype
+Object.prototype.getKeys = function () {
+  return Object.keys(this);
+};
+
+// Testing the function
+console.log(getKeys(student)); // Output: ["name"]
+
+// Do not change the code below this line
+window.student = student;
+window.getKeys = getKeys;
